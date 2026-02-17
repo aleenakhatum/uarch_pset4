@@ -1,0 +1,140 @@
+{
+    "timeunit": [
+        "timeunit",
+        "H0Y6L",
+        "module",
+        1
+    ],
+    "reg32_0000": [
+        "reg32_0000",
+        "S1LGh",
+        "module",
+        3
+    ],
+    "mux2_32": [
+        "mux2_32",
+        "mQYkr",
+        "module",
+        4
+    ],
+    "comp3": [
+        "comp3",
+        "cnIFC",
+        "module",
+        23
+    ],
+    "if_id_pr": [
+        "if_id_pr",
+        "iVx9J",
+        "module",
+        5
+    ],
+    "id_rr_pr": [
+        "id_rr_pr",
+        "jkPLR",
+        "module",
+        7
+    ],
+    "rr_ex_pr": [
+        "rr_ex_pr",
+        "M5Tk9",
+        "module",
+        16
+    ],
+    "ex_m_pr": [
+        "ex_m_pr",
+        "EaFeC",
+        "module",
+        24
+    ],
+    "mem_wb_pr": [
+        "mem_wb_pr",
+        "bggB8",
+        "module",
+        18
+    ],
+    "fetch_stage": [
+        "fetch_stage",
+        "Gz2qd",
+        "module",
+        20
+    ],
+    "decode_stage": [
+        "decode_stage",
+        "NW59P",
+        "module",
+        2
+    ],
+    "register_read_stage": [
+        "register_read_stage",
+        "cT6Bk",
+        "module",
+        14
+    ],
+    "execute_stage": [
+        "execute_stage",
+        "bnIja",
+        "module",
+        13
+    ],
+    "adder32_0000": [
+        "adder32_0000",
+        "uaMQU",
+        "module",
+        19
+    ],
+    "dependency_logic_tb": [
+        "dependency_logic_tb",
+        "HRVFm",
+        "module",
+        12
+    ],
+    "and2$": [
+        "and20x24",
+        "VFdkN",
+        "module",
+        21
+    ],
+    "dff$": [
+        "dff0x24",
+        "SD5jH",
+        "module",
+        8
+    ],
+    "mux2$": [
+        "mux20x24",
+        "gbBs9",
+        "module",
+        25
+    ],
+    "decoder2_4$": [
+        "decoder2_40x24",
+        "QC4rD",
+        "module",
+        22
+    ],
+    "alu4$": [
+        "alu40x24",
+        "AjRvi",
+        "module",
+        15
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        9
+    ],
+    "table_dffq": [
+        "table_dffq",
+        "abmDd",
+        "udp",
+        10
+    ],
+    "table_imux2": [
+        "table_imux2",
+        "BYmPi",
+        "udp",
+        11
+    ]
+}

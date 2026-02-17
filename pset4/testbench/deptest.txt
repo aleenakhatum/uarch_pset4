@@ -1,0 +1,5 @@
+MOV EAX,0x12340000  // B8 00 00 34 12
+MOV ECX,0x00001234  // B9 34 12 00 00
+ADD EAX,ECX         // 01 C8
+ADD EAX,#-1         // 83 C0 FF
+HLT                 // F4

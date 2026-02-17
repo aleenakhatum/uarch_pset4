@@ -1,0 +1,7 @@
+Command exited with non-zero status 255
+{"vcs1":{"timestamp_begin":1771292819.587137888, "rt":0.12, "ut":0.04, "st":0.03}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1771292819.283321016}
+{"VCS_COMP_START_TIME": 1771292819.283321016}
+{"VCS_COMP_END_TIME": 1771292819.778250157}
+{"VCS_USER_OPTIONS": "-debug_all -f master"}
+{"vcs1": {"peak_mem": 3738989}}

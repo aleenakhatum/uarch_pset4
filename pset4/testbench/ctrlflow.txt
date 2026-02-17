@@ -1,0 +1,5 @@
+MOV EAX, 0x12341234      // B8 34 12 34 12
+JMP Down                 // E9 05 00 00 00
+MOV EAX, 0xFADEDACE      // B8 CE DA DE FA
+Down ADD EAX, #1         // 05 01 00 00 00
+HLT                      // F4

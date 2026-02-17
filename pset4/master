@@ -1,0 +1,23 @@
+/home/projects/courses/spring_22/ee382n19_16785/lib/time -v 
+/home/projects/courses/spring_22/ee382n19_16785/lib/lib1 -v
+/home/projects/courses/spring_22/ee382n19_16785/lib/lib4 -v
+/home/projects/courses/spring_22/ee382n19_16785/lib/lib5
+src/fetch/instr_mem.v
+src/base_modules/reg32.v
+src/base_modules/reg8.v
+src/base_modules/mux2_32.v
+src/base_modules/instr_reg.v
+src/base_modules/comp3.v
+src/control_flow/if_id_pr.v
+src/control_flow/id_rr_pr.v
+src/control_flow/rr_ex_pr.v
+src/control_flow/ex_m_pr.v
+src/control_flow/m_wb_pr.v
+src/control_flow/dependency_logic.v
+src/fetch/fetch_stage.v
+src/decode/decode_stage.v
+src/register_read/reg_file.v
+src/register_read/register_read_stage.v
+src/execute/execute_stage.v
+src/execute/adder32.v
+testbench/dependency_logic_tb.v

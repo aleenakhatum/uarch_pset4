@@ -1,0 +1,137 @@
+0 
+28
++itf+/usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/vcsdp.tab
++memcbk
++vcsd
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/local/packages/synopsys_2022/vcs/T-2022.06/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libvirsim.so /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/liberrorinf.so /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/local/packages/synopsys_2022/vcs/T-2022.06/include
+-Mxllcflags=
+-debug_access+all+bc
+-debug_region+cell
+-f master
+-gen_obj
+-picarchive
+/usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/bin/vcs1
+master
+70
+which_declare=declare -f
+XDG_SESSION_ID=19855
+XDG_RUNTIME_DIR=/run/user/30132
+XDG_DATA_DIRS=/home/ecelrc/students/aak3265//.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+VSCODE_IPC_HOOK_CLI=/run/user/30132/vscode-ipc-cde1676d-dd97-413a-a5ae-73caf39b072c.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/30132/vscode-git-295c4485c3.sock
+VSCODE_GIT_ASKPASS_NODE=/home/ecelrc/students/aak3265/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/node
+VSCODE_GIT_ASKPASS_MAIN=/home/ecelrc/students/aak3265/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VMR_MODE_FLAG=32
+VC_STATIC_HOME=/usr/local/packages/synopsys_2020/vc_static/T-2022.06-SP1
+VCS_TARGET_ARCH=linux64
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_HOME=/usr/local/packages/synopsys_2022/vcs/T-2022.06/
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64
+TERM_PROGRAM_VERSION=1.109.4
+TERM_PROGRAM=vscode
+TCLSH=/usr/bin/tclsh
+S_COLORS=auto
+SYNOPSYS_SYN_ROOT=/usr/local/packages/synopsys_2022/syn
+SYNOPSYS_LC_ROOT=/usr/local/packages/synopsys_2022/lc/T-2022.03-SP5
+STROOT=/usr/local/packages/synopsys_2022/sentaurus/T-2022.03-SP1
+SSL_CERT_FILE=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+SSL_CERT_DIR=/etc/pki/tls/certs
+SSH_CONNECTION=172.29.202.21 51135 10.157.72.74 22
+SSH_CLIENT=172.29.202.21 51135 22
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SNPS_VCS_CLANG_PATH=/usr/local/packages/synopsys_2022/vcs/T-2022.06//linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SNPSLMD_LICENSE_FILE_modshare=/usr/local/packages/synopsys_2022/key:3
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+PATH_modshare=/usr/local/packages/synopsys_2022/QuantumATK/QuantumATK-U-2022.12-SP1/bin:6:/usr/local/packages/synopsys_2022/fm/T-2022.03-SP3/bin:3:/usr/bin:1:/usr/local/packages/synopsys_2022/verdi/T-2022.06-SP2/bin:3:/usr/share/Modules/bin:999999999:/usr/local/packages/synopsys_2022/QuantumATK/QuantumATK-U-2022.12-SP1/libexec:3:/usr/local/packages/synopsys_2022/taurus_medici/T_2022.03/bin:3:/usr/local/bin:1:/usr/local/packages/synopsys_2022/finesim/T-2022.06-SP2/bin:3:/usr/local/packages/synopsys_2022/prime/T-2022.03-SP5/bin:3:/usr/local/packages/synopsys_2022/wv/T-2022.06-SP2/bin:3:/usr/local/packages/synopsys_2022/starrc/U-2022.12-SP3/bin:3:/usr/local/packages/synopsys_2022/primewave/T-2022.06/bin:3:/usr/local/packages/synopsys_2022/syn/T-2022.03-SP2/linux64/syn/bin:3:/usr/local/packages/synopsys_2022/vcs/T-2022.06/bin:3:/usr/local/packages/synopsys_2022/taurus_tsuprem4/T_2022.03/bin:3:/usr/sbin:1:/home/ecelrc/students/aak3265/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/bin/remote-cli:999999999:/usr/local/packages/synopsys_2022/hspice/T-2022.06/hspice/bin:3:/usr/local/sbin:1:/usr/local/packages/synopsys_2022/sentaurus/T-2022.03-SP1/bin:3:/usr/local/packages/synopsys_2022/lc/T-2022.03-SP5/bin:3:/usr/local/packages/synopsys_2022/vc_static/T-2022.06-SP1/bin:6:/usr/local/packages/synopsys_2022/syn/T-2022.03-SP2/bin:6:/usr/local/packages/synopsys_2022/icc2/T-2022.03-SP3/bin:3
+OVA_UUM=0
+MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
+MODULESHOME=/home/projects/Modules
+MODULEPATH_modshare=/etc/scl/modulefiles:999999999:/home/projects/Modules/tools:3:/home/projects/Modules/projects:3:/home/projects/Modules/base:3
+MODULEPATH=/etc/scl/modulefiles:/home/projects/Modules/projects:/home/projects/Modules/tools:/home/projects/Modules/base
+MANPATH_modshare=/home/projects/Modules/man:3:/usr/share/man:3
+MAILPATH=/var/spool/mail/aak3265
+LOADEDMODULES_modshare=synopsys/2022:3:system:3:modules:3:ece-defaults:3:aliases:3
+LOADEDMODULES=modules:system:aliases:ece-defaults:synopsys/2022
+LM_LICENSE_FILE_modshare=/usr/local/packages/synopsys_2022/key:3
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+HISTCONTROL=ignoredups
+GUESTFISH_RESTORE=\e[0m
+GUESTFISH_PS1=\[\e[1;32m\]><fs>\[\e[0;31m\] 
+GUESTFISH_OUTPUT=\e[0m
+GUESTFISH_INIT=\e[1;34m
+GIT_ASKPASS=/home/ecelrc/students/aak3265/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/extensions/git/dist/askpass.sh
+DVE_HOME=/usr/local/packages/synopsys_2022/vcs/T-2022.06/
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/30132/bus
+COLORTERM=truecolor
+BASH_FUNC_which%%=() {  ( alias;_ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@_}
+BASH_FUNC_switchml%%=() {  typeset swfound=1;_ if [ "${MODULES_USE_COMPAT_VERSION:-0}" = '1' ]; then_ typeset swname='main';_ if [ -e /usr/share/Modules/libexec/modulecmd.tcl ]; then_ typeset swfound=0;_ unset MODULES_USE_COMPAT_VERSION;_ fi;_ else_ typeset swname='compatibility';_ if [ -e /usr/share/Modules/libexec/modulecmd-compat ]; then_ typeset swfound=0;_ MODULES_USE_COMPAT_VERSION=1;_ export MODULES_USE_COMPAT_VERSION;_ fi;_ fi;_ if [ $swfound -eq 0 ]; then_ echo "Switching to Modules $swname version";_ source /usr/share/Modules/init/bash;_ else_ echo "Cannot switch to Modules $swname version, command not found";_ return 1;_ fi_}
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then_ eval "module $@";_ else_ /usr/bin/scl "$@";_ fi_}
+BASH_FUNC_module%%=() {  eval `$TCLSH /home/projects/Modules/modulecmd.tcl bash $*`_}
+BASH_FUNC_ml%%=() {  module ml "$@"_}
+0
+0
+26
+1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib1
+1771306868 testbench/dependency_logic_tb.v
+1771281593 src/execute/adder32.v
+1771290674 src/execute/execute_stage.v
+1771300443 src/register_read/register_read_stage.v
+1771257179 src/register_read/reg_file.v
+1771276970 src/decode/decode_stage.v
+1771300945 src/fetch/fetch_stage.v
+1771306671 src/control_flow/dependency_logic.v
+1771305100 src/control_flow/m_wb_pr.v
+1771304584 src/control_flow/ex_m_pr.v
+1771304234 src/control_flow/rr_ex_pr.v
+1771303877 src/control_flow/id_rr_pr.v
+1771301300 src/control_flow/if_id_pr.v
+1771306076 src/base_modules/comp3.v
+1771191653 src/base_modules/instr_reg.v
+1771197793 src/base_modules/mux2_32.v
+1771198333 src/base_modules/reg8.v
+1771192108 src/base_modules/reg32.v
+1771293018 src/fetch/instr_mem.v
+1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib5
+1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib4
+1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib1
+1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/time
+1771306845 master
+1654052745 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/vcsdp.tab
+4
+1654054205 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libvirsim.so
+1654053585 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/liberrorinf.so
+1654053489 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
+1654053565 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libvfs.so
+1771306872 simv.daidir
+-1 partitionlib

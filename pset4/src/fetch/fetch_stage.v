@@ -3,9 +3,6 @@ module fetch_stage(
     input wire clk,
     input wire pc_we,
     input wire [31:0] pc,
-    input wire [31:0] jmp_target,
-    input wire is_jmp,
-    input wire is_halt,
     output wire [39:0] instr,
     output wire [31:0] next_pc,
     output wire [2:0] instr_length
@@ -17,11 +14,13 @@ module fetch_stage(
         .instr(instr)
     );
 
-    reg halt_reg;
 
     reg [2:0] current_length;
     wire [7:0] opcode = instr[7:0]; // Little Endian: Opcode is at bottom
 
+    //Halt Logic
+    wire is_halt = (opcode == 8'hF4);
+    reg halt_reg;
     always@(posedge clk or posedge rst) begin
         if (rst) begin
             halt_reg <= 1'b0;
@@ -52,6 +51,11 @@ module fetch_stage(
     //Update Logic
     wire update_enable;
     assign update_enable = pc_we && ~halt_reg;
+
+    //Jmp logic
+    wire is_jmp = (opcode == 8'hE9);
+    wire [31:0] jmp_offset = {instr[39:32], instr[31:24], instr[23:16], instr[15:8]};
+    wire [31:0] jmp_target = pc + 32'd5 + jmp_offset;
 
     wire [31:0] candidate_pc;
     assign candidate_pc = is_jmp ? jmp_target : (pc + current_length);

@@ -1,7 +1,8 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Sun Feb 15 17:42:04 2026
-# Designs open: 0
+# Saved on Tue Feb 17 19:50:11 2026
+# Designs open: 1
+#   V1: /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/pipeline_hex_test.vcd
 # Toplevel windows open: 1
 # 	TopLevel.1
 #   Source.1: 
@@ -12,10 +13,17 @@
 # DVE build date: May 31 2022 20:53:03
 
 
-#<Session mode="Full" path="/home/ecelrc/students/aak3265/Spring2026/pset4/DVEfiles/session.tcl" type="Debug">
+#<Session mode="Full" path="/home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/DVEfiles/session.tcl" type="Debug">
 
 gui_set_loading_session_type Post
 gui_continuetime_set
+
+# Close design
+if { [gui_sim_state -check active] } {
+    gui_sim_terminate
+}
+gui_close_db -all
+gui_expr_clear_all
 
 # Close all windows
 gui_close_window -type Console
@@ -57,7 +65,7 @@ if {![gui_exist_window -window TopLevel.1]} {
 } else { 
     set TopLevel.1 TopLevel.1
 }
-gui_show_window -window ${TopLevel.1} -show_state normal -rect {{8 31} {1445 872}}
+gui_show_window -window ${TopLevel.1} -show_state normal -rect {{8 31} {1443 870}}
 
 # ToolBar settings
 gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
@@ -98,23 +106,23 @@ gui_hide_toolbar -toolbar {Testbench}
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 435]
+set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 433]
 catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 435
+gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 433
 gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
 gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 434} {height 589} {dock_state left} {dock_on_new_line true} {child_hier_colhier 298} {child_hier_coltype 133} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 395]
+gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 432} {height 589} {dock_state left} {dock_on_new_line true} {child_hier_colhier 298} {child_hier_coltype 133} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
+set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 393]
 catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 395
+gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 393
 gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 589
 gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 394} {height 589} {dock_state left} {dock_on_new_line true} {child_data_colvariable 180} {child_data_colvalue 135} {child_data_coltype 111} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 154]
-gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1438
-gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 154
+gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 392} {height 589} {dock_state left} {dock_on_new_line true} {child_data_colvariable 180} {child_data_colvalue 135} {child_data_coltype 111} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
+set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 152]
+gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1436
+gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 152
 gui_set_window_pref_key -window ${Console.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1437} {height 153} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Console.1} {{left 0} {top 0} {width 1435} {height 151} {dock_state bottom} {dock_on_new_line true}}
 #### Start - Readjusting docked view's offset / size
 set dockAreaList { top left right bottom }
 foreach dockArea $dockAreaList {
@@ -157,8 +165,11 @@ gui_update_statusbar_target_frame ${TopLevel.1}
 
 # DVE Open design session: 
 
-gui_set_precision 1s
-gui_set_time_units 1s
+if { ![gui_is_db_opened -db {/home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/pipeline_hex_test.vcd.vpd}] } {
+	gui_open_db -design V1 -file /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/pipeline_hex_test.vcd.vpd -nosource
+}
+gui_set_precision 1ps
+gui_set_time_units 1ps
 #</Database>
 
 # DVE Global setting session: 
@@ -208,12 +219,17 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_hier_list_init -id ${Hier.1}
 gui_change_design -id ${Hier.1} -design V1
+catch {gui_list_expand -id ${Hier.1} pipeline_tb2}
+catch {gui_list_select -id ${Hier.1} {pipeline_tb2.uut}}
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
+gui_list_show_data -id ${Data.1} {pipeline_tb2.uut}
+gui_show_window -window ${Data.1}
+catch { gui_list_select -id ${Data.1} {pipeline_tb2.uut.D_instr }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -229,6 +245,7 @@ gui_src_set_reusable -id ${Source.1}
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Source.1}
+	gui_set_active_window -window ${DLPane.1}
 }
 #</Session>
 

@@ -101,9 +101,6 @@ module pipeline_top(
         .clk(clk),
         .pc_we(~actual_stall),
         .pc(F_pc_current),
-        .jmp_target(E_jmp_target), 
-        .is_jmp(E_is_jmp), 
-        .is_halt(E_is_halt),
         .instr(F_instr),
         .next_pc(F_pc_next),
         .instr_length(F_instr_len)
@@ -218,7 +215,7 @@ module pipeline_top(
 
     rr_ex_pr RR_EX_REG (
         .clk(clk), .rst(rst),
-        .stall(actual_stall), 
+        .stall(1'b0), 
         .flush(E_is_jmp),
         .instr_length_in(RR_instr_len),
         .pc_in(RR_pc),

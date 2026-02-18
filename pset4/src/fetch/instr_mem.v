@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module instr_mem #(parameter MEMFILE = "testbench/deptest.hex") (
+module instr_mem #(parameter MEMFILE = "testbench/ctrlflow.hex") (
     input wire [31:0] pc,
     output wire [39:0] instr //5 byte instruction
 );

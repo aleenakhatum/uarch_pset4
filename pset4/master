@@ -22,4 +22,4 @@ src/register_read/register_read_stage.v
 src/execute/adder32.v
 src/execute/execute_stage.v
 src/pipeline.v
-testbench/pipeline_tb2.v
+testbench/combined_tb.v

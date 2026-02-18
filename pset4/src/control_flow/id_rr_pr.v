@@ -22,8 +22,9 @@ module id_rr_pr(
     output wire [2:0] instr_length_out
 );
 
+    // --- Control Logic ---
     wire we;
-    inv1$ inv_stall (.out(we), .in(stall));
+    inv1$ inv_stall (.out(we), .in(stall)); // we=0 when stalling
 
     wire rst_sig;
     or2$ or_flush (.out(rst_sig), .in0(rst), .in1(flush));
@@ -31,57 +32,28 @@ module id_rr_pr(
     wire rst_bar;
     inv1$ inv_rst(.out(rst_bar), .in(rst_sig));
 
-    reg32 pc_reg (
-        .clk(clk),
-        .set(1'b0),
-        .rst(rst_sig),
-        .wdata(pc_in),
-        .we(we), 
-        .rdata(pc_out)
-    );
-
-    reg32 imm_reg (
-        .clk(clk),
-        .set(1'b0),
-        .rst(rst_sig),
-        .wdata(imm_in),
-        .we(we), 
-        .rdata(imm_out)
-    );
+    // --- Data Path (PC, Imm, Length, Indices) ---
+    // These freeze during a stall (we=0).
+    reg32 pc_reg   (.clk(clk), .set(1'b0), .rst(rst_sig), .wdata(pc_in), .we(we), .rdata(pc_out));
+    reg32 imm_reg  (.clk(clk), .set(1'b0), .rst(rst_sig), .wdata(imm_in), .we(we), .rdata(imm_out));
 
     genvar i;
-
-    //Ctrl
     generate
         for (i = 0; i < 7; i = i + 1) begin : ctrl_loop
             wire d_in;
-            // Mux: If WE=1 (s0=1), take Input (in1). If WE=0, keep Output/Loopback (in0).
-            // Assuming strict mapping: in0=OldValue, in1=NewValue, s0=WE
             mux2$ m (.outb(d_in), .in0(ctrl_out[i]), .in1(ctrl_in[i]), .s0(we));
             dff$ ff (.clk(clk), .d(d_in), .q(ctrl_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
         end
-    endgenerate
-
-    //src1_idx and dst_idx
-    generate
         for (i = 0; i < 3; i = i + 1) begin : src1_loop
             wire d_in;
             mux2$ m (.outb(d_in), .in0(src1_idx_out[i]), .in1(src1_idx_in[i]), .s0(we));
             dff$ ff (.clk(clk), .d(d_in), .q(src1_idx_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
         end
-    endgenerate
-    assign dst_idx = src1_idx_out;
-
-    generate
         for (i = 0; i < 3; i = i + 1) begin : src2_loop
             wire d_in;
             mux2$ m (.outb(d_in), .in0(src2_idx_out[i]), .in1(src2_idx_in[i]), .s0(we));
             dff$ ff (.clk(clk), .d(d_in), .q(src2_idx_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
         end
-    endgenerate
-
-    //instr_length
-    generate
         for (i = 0; i < 3; i = i + 1) begin : len_loop
             wire d_in;
             mux2$ m (.outb(d_in), .in0(instr_length_out[i]), .in1(instr_length_in[i]), .s0(we));
@@ -89,13 +61,23 @@ module id_rr_pr(
         end
     endgenerate
 
-    // valid bit
-    wire valid_next;
-    mux2$ valid_mux (.outb(valid_next), .in0(valid_out), .in1(valid_in), .s0(we));
-    
+    assign dst_idx = src1_idx_out;
+
+    // --- VALID BIT LOGIC (The Bubble Injector) ---
+    // If stall=1, we MUST inject a 0 into the valid bit for the next cycle.
+    // Logic: next_valid = stall ? 0 : valid_in;
+
+    wire valid_to_reg;
+    mux2$ bubble_mux (
+        .outb(valid_to_reg), 
+        .in1(1'b0),     // Select 0 if s0=1 (STALL)
+        .in0(valid_in), // Select valid_in if s0=0 (NO STALL)
+        .s0(stall)      // Connected to actual_stall from top
+    );
+
     dff$ valid_reg (
         .clk(clk), 
-        .d(valid_next), 
+        .d(valid_to_reg), 
         .q(valid_out), 
         .qbar(), 
         .r(rst_bar), 

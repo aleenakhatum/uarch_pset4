@@ -28,8 +28,8 @@ module decode_stage(
     assign ctrl = {src2mux_reg, op_reg, read1_reg, read2_reg, we_reg, is_jmp_reg, is_halt_reg};
     assign length = length_reg;
 
-    wire [7:0] opcode = instr[39:32];
-    wire [7:0] modrm = instr[31:24];
+    wire [7:0] opcode = instr[7:0];
+    wire [7:0] modrm = instr[15:8];
     
     always @(*) begin
         //Initialize
@@ -43,6 +43,7 @@ module decode_stage(
         we_reg            = 1'b0;
         is_jmp_reg = 1'b0;
         is_halt_reg = 1'b0;
+        length_reg = 3'b001;
 
         case(opcode)
             8'h01: begin //ADD r/m16,r16
@@ -56,11 +57,11 @@ module decode_stage(
 
             end
             8'h05: begin //ADD EAX,imm32
-                imm_reg = {instr[7:0], instr[15:8], instr[23:16], instr[31:24]}; //little-endian
+                imm_reg = {instr[39:32], instr[31:24], instr[23:16], instr[15:8]}; //little-endian
                 src1_idx_reg = 3'b000; //EAX hardcoded
                 length_reg = 3'd5;
                 op_reg = 1'b1; //add op
-                read2_reg = 1'b1;
+                read1_reg = 1'b1;
                 we_reg = 1'b1;
                 src2mux_reg = 1'b1;
             end
@@ -69,28 +70,28 @@ module decode_stage(
                 imm_reg = {{24{instr[23]}}, instr[23:16]};
                 length_reg = 3'd3;
                 op_reg = 1'b1; //add op
-                read2_reg = 1'b1;
+                read1_reg = 1'b1;
                 we_reg = 1'b1;
                 src2mux_reg = 1'b1;
             end
             8'hE9: begin //JMP rel32
                 is_jmp_reg = 1'b1;
-                imm_reg = {instr[7:0], instr[15:8], instr[23:16], instr[31:24]};
+                imm_reg = {instr[39:32], instr[31:24], instr[23:16], instr[15:8]};
                 length_reg = 3'd5;
             end
             8'hB8: begin //MOV EAX, imm32
-                imm_reg = {instr[7:0], instr[15:8], instr[23:16], instr[31:24]};
+                imm_reg = {instr[39:32], instr[31:24], instr[23:16], instr[15:8]};
                 length_reg = 3'd5;
                 src1_idx_reg = opcode[2:0] & 3'b111;
-                read2_reg = 1'b1;
+                //read2_reg = 1'b1;
                 we_reg = 1'b1;
                 src2mux_reg = 1'b1;
             end
             8'hB9: begin //MOV ECX, imm32
-                imm_reg = {instr[7:0], instr[15:8], instr[23:16], instr[31:24]};
+                imm_reg = {instr[39:32], instr[31:24], instr[23:16], instr[15:8]};
                 length_reg = 3'd5;
                 src1_idx_reg = opcode[2:0] & 3'b111;
-                read2_reg = 1'b1;
+                //read2_reg = 1'b1;
                 we_reg = 1'b1;
                 src2mux_reg = 1'b1;
             end

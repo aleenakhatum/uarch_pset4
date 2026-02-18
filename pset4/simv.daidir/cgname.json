@@ -23,41 +23,41 @@
         "module",
         23
     ],
-    "if_id_pr": [
-        "if_id_pr",
-        "iVx9J",
-        "module",
-        5
-    ],
-    "id_rr_pr": [
-        "id_rr_pr",
-        "jkPLR",
-        "module",
-        7
-    ],
-    "rr_ex_pr": [
-        "rr_ex_pr",
-        "M5Tk9",
-        "module",
-        16
-    ],
-    "ex_m_pr": [
-        "ex_m_pr",
-        "EaFeC",
+    "if_id_pr_0000": [
+        "if_id_pr_0000",
+        "VevWj",
         "module",
         24
     ],
-    "mem_wb_pr": [
-        "mem_wb_pr",
-        "bggB8",
+    "id_rr_pr_0000": [
+        "id_rr_pr_0000",
+        "xC4KD",
         "module",
         18
     ],
-    "fetch_stage": [
-        "fetch_stage",
-        "Gz2qd",
+    "ex_m_pr_0000": [
+        "ex_m_pr_0000",
+        "kiAwh",
         "module",
-        20
+        6
+    ],
+    "mem_wb_pr_0000": [
+        "mem_wb_pr_0000",
+        "EFAyM",
+        "module",
+        26
+    ],
+    "dependency_logic": [
+        "dependency_logic",
+        "yg7SC",
+        "module",
+        27
+    ],
+    "writeback_stage": [
+        "writeback_stage",
+        "cN2Ud",
+        "module",
+        28
     ],
     "decode_stage": [
         "decode_stage",
@@ -65,17 +65,17 @@
         "module",
         2
     ],
+    "reg_file": [
+        "reg_file",
+        "h6AbR",
+        "module",
+        29
+    ],
     "register_read_stage": [
         "register_read_stage",
         "cT6Bk",
         "module",
         14
-    ],
-    "execute_stage": [
-        "execute_stage",
-        "bnIja",
-        "module",
-        13
     ],
     "adder32_0000": [
         "adder32_0000",
@@ -83,17 +83,35 @@
         "module",
         19
     ],
-    "dependency_logic_tb": [
-        "dependency_logic_tb",
-        "HRVFm",
+    "execute_stage": [
+        "execute_stage",
+        "bnIja",
         "module",
-        12
+        13
+    ],
+    "pipeline_tb2": [
+        "pipeline_tb2",
+        "CdZut",
+        "module",
+        30
     ],
     "and2$": [
         "and20x24",
         "VFdkN",
         "module",
         21
+    ],
+    "or2$": [
+        "or20x24",
+        "HYgzw",
+        "module",
+        31
+    ],
+    "inv1$": [
+        "inv10x24",
+        "NYIg8",
+        "module",
+        32
     ],
     "dff$": [
         "dff0x24",

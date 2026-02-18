@@ -36,7 +36,7 @@ module rr_ex_pr(
         .set(1'b0), 
         .rst(rst_sig),
         .wdata(pc_in), 
-        .we(we), 
+        .we(1'b1), 
         .rdata(pc_out)
     );
 
@@ -45,7 +45,7 @@ module rr_ex_pr(
         .set(1'b0), 
         .rst(rst_sig),
         .wdata(src1_in), 
-        .we(we), 
+        .we(1'b1), 
         .rdata(src1_out)
     );
 
@@ -54,7 +54,7 @@ module rr_ex_pr(
         .set(1'b0), 
         .rst(rst_sig),
         .wdata(src2_in), 
-        .we(we), 
+        .we(1'b1), 
         .rdata(src2_out)
     );
 
@@ -64,8 +64,7 @@ module rr_ex_pr(
     generate
         for (i = 0; i < 7; i = i + 1) begin : ctrl_loop
             wire d_in;
-            mux2$ m (.outb(d_in), .in0(ctrl_out[i]), .in1(ctrl_in[i]), .s0(we));
-            dff$ ff (.clk(clk), .d(d_in), .q(ctrl_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
+            dff$ ff (.clk(clk), .d(ctrl_in[i]), .q(ctrl_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
         end
     endgenerate
 
@@ -73,8 +72,7 @@ module rr_ex_pr(
     generate
         for (i = 0; i < 3; i = i + 1) begin : dst_loop
             wire d_in;
-            mux2$ m (.outb(d_in), .in0(dst_idx_out[i]), .in1(dst_idx_in[i]), .s0(we));
-            dff$ ff (.clk(clk), .d(d_in), .q(dst_idx_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
+            dff$ ff (.clk(clk), .d(dst_idx_in[i]), .q(dst_idx_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
         end
     endgenerate
 
@@ -82,19 +80,15 @@ module rr_ex_pr(
     generate
         for (i = 0; i < 3; i = i + 1) begin : len_loop
             wire d_in;
-            mux2$ m (.outb(d_in), .in0(instr_length_out[i]), .in1(instr_length_in[i]), .s0(we));
-            dff$ ff (.clk(clk), .d(d_in), .q(instr_length_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
+            dff$ ff (.clk(clk), .d(instr_length_in[i]), .q(instr_length_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
         end
     endgenerate
 
 
     // valid bit
-    wire valid_next;
-    mux2$ valid_mux (.outb(valid_next), .in0(valid_out), .in1(valid_in), .s0(we));
-    
     dff$ valid_reg (
         .clk(clk), 
-        .d(valid_next), 
+        .d(valid_in), 
         .q(valid_out), 
         .qbar(), 
         .r(rst_bar), 

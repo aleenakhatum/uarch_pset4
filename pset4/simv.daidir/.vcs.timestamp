@@ -30,12 +30,12 @@
 master
 70
 which_declare=declare -f
-XDG_SESSION_ID=19855
+XDG_SESSION_ID=20060
 XDG_RUNTIME_DIR=/run/user/30132
 XDG_DATA_DIRS=/home/ecelrc/students/aak3265//.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
-VSCODE_IPC_HOOK_CLI=/run/user/30132/vscode-ipc-cde1676d-dd97-413a-a5ae-73caf39b072c.sock
-VSCODE_GIT_IPC_HANDLE=/run/user/30132/vscode-git-295c4485c3.sock
+VSCODE_IPC_HOOK_CLI=/run/user/30132/vscode-ipc-5f3cd5ca-3086-401d-8a4d-66b99f363e6c.sock
+VSCODE_GIT_IPC_HANDLE=/run/user/30132/vscode-git-9ceb667604.sock
 VSCODE_GIT_ASKPASS_NODE=/home/ecelrc/students/aak3265/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/node
 VSCODE_GIT_ASKPASS_MAIN=/home/ecelrc/students/aak3265/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/extensions/git/dist/askpass-main.js
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
@@ -60,8 +60,8 @@ SYNOPSYS_LC_ROOT=/usr/local/packages/synopsys_2022/lc/T-2022.03-SP5
 STROOT=/usr/local/packages/synopsys_2022/sentaurus/T-2022.03-SP1
 SSL_CERT_FILE=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
 SSL_CERT_DIR=/etc/pki/tls/certs
-SSH_CONNECTION=172.29.202.21 51135 10.157.72.74 22
-SSH_CLIENT=172.29.202.21 51135 22
+SSH_CONNECTION=172.29.202.21 49171 10.157.72.74 22
+SSH_CLIENT=172.29.202.21 49171 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VCS_CLANG_PATH=/usr/local/packages/synopsys_2022/vcs/T-2022.06//linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -101,37 +101,39 @@ BASH_FUNC_module%%=() {  eval `$TCLSH /home/projects/Modules/modulecmd.tcl bash 
 BASH_FUNC_ml%%=() {  module ml "$@"_}
 0
 0
-26
+28
 1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib1
-1771306868 testbench/dependency_logic_tb.v
-1771281593 src/execute/adder32.v
+1771364339 testbench/pipeline_tb2.v
+1771377287 src/pipeline.v
 1771290674 src/execute/execute_stage.v
-1771300443 src/register_read/register_read_stage.v
+1771281593 src/execute/adder32.v
+1771373606 src/register_read/register_read_stage.v
 1771257179 src/register_read/reg_file.v
-1771276970 src/decode/decode_stage.v
-1771300945 src/fetch/fetch_stage.v
-1771306671 src/control_flow/dependency_logic.v
+1771377067 src/decode/decode_stage.v
+1771363335 src/fetch/fetch_stage.v
+1771305667 src/control_flow/writeback_stage.v
+1771376685 src/control_flow/dependency_logic.v
 1771305100 src/control_flow/m_wb_pr.v
 1771304584 src/control_flow/ex_m_pr.v
-1771304234 src/control_flow/rr_ex_pr.v
-1771303877 src/control_flow/id_rr_pr.v
-1771301300 src/control_flow/if_id_pr.v
-1771306076 src/base_modules/comp3.v
+1771369059 src/control_flow/rr_ex_pr.v
+1771370438 src/control_flow/id_rr_pr.v
+1771309862 src/control_flow/if_id_pr.v
+1771353686 src/base_modules/comp3.v
 1771191653 src/base_modules/instr_reg.v
 1771197793 src/base_modules/mux2_32.v
 1771198333 src/base_modules/reg8.v
 1771192108 src/base_modules/reg32.v
-1771293018 src/fetch/instr_mem.v
+1771350591 src/fetch/instr_mem.v
 1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib5
 1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib4
 1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/lib1
 1642711270 /home/projects/courses/spring_22/ee382n19_16785/lib/time
-1771306845 master
+1771349648 master
 1654052745 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/vcsdp.tab
 4
 1654054205 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libvirsim.so
 1654053585 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /usr/local/packages/synopsys_2022/vcs/T-2022.06/linux64/lib/libvfs.so
-1771306872 simv.daidir
+1771377293 simv.daidir
 -1 partitionlib

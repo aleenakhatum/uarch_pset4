@@ -1,4 +1,5 @@
 module fetch_stage(
+    input wire rst,
     input wire clk,
     input wire pc_we,
     input wire [31:0] pc,
@@ -16,8 +17,19 @@ module fetch_stage(
         .instr(instr)
     );
 
+    reg halt_reg;
+
     reg [2:0] current_length;
     wire [7:0] opcode = instr[7:0]; // Little Endian: Opcode is at bottom
+
+    always@(posedge clk or posedge rst) begin
+        if (rst) begin
+            halt_reg <= 1'b0;
+        end
+        else if (is_halt) begin
+            halt_reg <= 1'b1; //once reg = 1, stay 1
+        end
+    end
 
     always @(*) begin
         case(opcode)
@@ -39,7 +51,7 @@ module fetch_stage(
 
     //Update Logic
     wire update_enable;
-    assign update_enable = pc_we && ~is_halt;
+    assign update_enable = pc_we && ~halt_reg;
 
     wire [31:0] candidate_pc;
     assign candidate_pc = is_jmp ? jmp_target : (pc + current_length);

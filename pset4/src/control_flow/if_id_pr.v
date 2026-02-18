@@ -61,7 +61,15 @@ module if_id_pr(
         .s(set_bar)
     );
 
-    assign instr_length_out = instr_length_in;
-
+    genvar i;
+    generate
+        for (i = 0; i < 3; i = i + 1) begin : len_loop
+            wire d_in, mux_out_b;
+            mux2$ m (.outb(mux_out_b), .in0(instr_length_out[i]), .in1(instr_length_in[i]), .s0(pc_we));
+            inv1$ inv (.out(d_in), .in(mux_out_b));
+            
+            dff$ ff (.clk(clk), .d(d_in), .q(instr_length_out[i]), .qbar(), .r(rst_bar), .s(1'b1));
+        end
+    endgenerate
 
 endmodule

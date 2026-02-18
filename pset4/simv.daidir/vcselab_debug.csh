@@ -1,6 +1,6 @@
 #!/bin/csh -f
 
-cd /home/ecelrc/students/aak3265/Spring2026/pset4
+cd /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4
 
 #This ENV is used to avoid overriding current script in next vcselab run 
 setenv SNPS_VCSELAB_SCRIPT_NO_OVERRIDE  1

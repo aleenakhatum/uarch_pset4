@@ -1,4 +1,5 @@
 module register_read_stage(
+    input wire RR_stall,
     input wire clk,
     input wire set,
     input wire rst,

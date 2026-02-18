@@ -8,12 +8,12 @@ gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {str
 gui_state_default_create -off -ini
 gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file TOP.dump.vpd -design V1} {gui_open_db -file /home/ecelrc/students/aak3265/Spring2026/pset1b/TOP.dump.vpd -design V1} {gui_open_db -file /home/ecelrc/students/aak3265/Spring2026/pset1b/tb2_ALU.dump.vpd -design V1} {gui_open_db -file /home/ecelrc/students/aak3265/Spring2026/pset1b/xor2.dump.vpd -design V1} {gui_open_db -file /home/ecelrc/students/aak3265/Spring2026/pset1b/and2.dump.vpd -design V1}}
 gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/ecelrc/students/aak3265/Spring2026/pset1b/session.TOP.dump.vpd.tcl -ignore_errors} {gui_load_session -ignore_errors -file /home/ecelrc/students/aak3265/Spring2026/pset1b/session.TOP.dump.vpd.tcl} {gui_load_session -ignore_errors -file /home/ecelrc/students/aak3265/vlsi1/lab3_temp/rtl/session.inter.vpd.tcl -ignore_errors} {gui_load_session -ignore_errors -file /home/ecelrc/students/aak3265/vlsi1/lab3_temp/rtl/session.inter.vpd.tcl}}
-gui_set_state_value -category Layout -key child_console_size_x -value 1438
-gui_set_state_value -category Layout -key child_console_size_y -value 154
+gui_set_state_value -category Layout -key child_console_size_x -value 1436
+gui_set_state_value -category Layout -key child_console_size_y -value 152
 gui_set_state_value -category Layout -key child_data_coltype -value 111
 gui_set_state_value -category Layout -key child_data_colvalue -value 135
 gui_set_state_value -category Layout -key child_data_colvariable -value 180
-gui_set_state_value -category Layout -key child_data_size_x -value 395
+gui_set_state_value -category Layout -key child_data_size_x -value 393
 gui_set_state_value -category Layout -key child_data_size_y -value 589
 gui_set_state_value -category Layout -key child_driver_size_x -value 1185
 gui_set_state_value -category Layout -key child_driver_size_y -value 174
@@ -21,7 +21,7 @@ gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colhier -value 298
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
 gui_set_state_value -category Layout -key child_hier_coltype -value 133
-gui_set_state_value -category Layout -key child_hier_size_x -value 435
+gui_set_state_value -category Layout -key child_hier_size_x -value 433
 gui_set_state_value -category Layout -key child_hier_size_y -value 589
 gui_set_state_value -category Layout -key child_hier_sort_column -value 1
 gui_set_state_value -category Layout -key child_schematic_docknewline -value false
@@ -32,7 +32,7 @@ gui_set_state_value -category Layout -key child_schematic_size_y -value 312
 gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
-gui_set_state_value -category Layout -key child_source_size_x -value 611
+gui_set_state_value -category Layout -key child_source_size_x -value 613
 gui_set_state_value -category Layout -key child_source_size_y -value 584
 gui_set_state_value -category Layout -key child_wave_colname -value 210
 gui_set_state_value -category Layout -key child_wave_colvalue -value 211
@@ -40,8 +40,8 @@ gui_set_state_value -category Layout -key child_wave_left -value 425
 gui_set_state_value -category Layout -key child_wave_right -value 1035
 gui_set_state_value -category Layout -key main_pos_x -value 8
 gui_set_state_value -category Layout -key main_pos_y -value 31
-gui_set_state_value -category Layout -key main_size_x -value 1446
-gui_set_state_value -category Layout -key main_size_y -value 873
+gui_set_state_value -category Layout -key main_size_x -value 1444
+gui_set_state_value -category Layout -key main_size_y -value 871
 gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
 gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
 gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
@@ -66,3 +66,145 @@ gui_create_state_key -category Widget_History -key {dlgSimSetup|m_setupTab|tab p
 gui_state_default_create -off
 
 # Begin command logging
+gui_open_db -file /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/pipeline_hex_test.vcd -design V1
+gui_list_expand -id  Hier.1   pipeline_tb2
+gui_list_select -id Hier.1 -current_item_name pipeline_tb2.uut -current_item_type Scope  -selected  { pipeline_tb2.uut   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.RR_src1_idx[2:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.E_result[31:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}  pipeline_tb2.uut.RR_valid   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}  pipeline_tb2.uut.RR_valid  pipeline_tb2.uut.E_valid   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}  pipeline_tb2.uut.RR_valid  pipeline_tb2.uut.E_valid  {pipeline_tb2.uut.E_result[31:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}  pipeline_tb2.uut.RR_valid  pipeline_tb2.uut.E_valid  {pipeline_tb2.uut.E_result[31:0]}  pipeline_tb2.uut.M_valid   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}  pipeline_tb2.uut.RR_valid  pipeline_tb2.uut.E_valid  {pipeline_tb2.uut.E_result[31:0]}  pipeline_tb2.uut.M_valid  {pipeline_tb2.uut.M_result[31:0]}   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.stall_global  {pipeline_tb2.uut.F_instr[39:0]}  {pipeline_tb2.uut.D_instr[39:0]}  {pipeline_tb2.uut.RR_imm[31:0]}  pipeline_tb2.uut.RR_valid  pipeline_tb2.uut.E_valid  {pipeline_tb2.uut.E_result[31:0]}  pipeline_tb2.uut.M_valid  {pipeline_tb2.uut.M_result[31:0]}  pipeline_tb2.uut.WB_valid   }
+gui_list_select -id Data.1 { {pipeline_tb2.uut.WB_result[31:0]}   }
+gui_list_select -id Data.1 { {pipeline_tb2.uut.WB_dst_idx[2:0]}   }
+gui_list_select -id Data.1 { pipeline_tb2.uut.clk   }
+gui_list_select -id Data.1 { pipeline_tb2.uut.rst   }
+gui_list_select -id Data.1 { {pipeline_tb2.uut.debug_pc[31:0]}   }
+gui_list_select -id Data.1 { {pipeline_tb2.uut.debug_result[31:0]}   }
+gui_list_select -id Data.1 { pipeline_tb2.uut.actual_stall   }
+gui_list_select -id Data.1 { pipeline_tb2.uut.flush_jmp   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { pipeline_tb2.uut.stall_global {pipeline_tb2.uut.F_instr[39:0]} {pipeline_tb2.uut.D_instr[39:0]} {pipeline_tb2.uut.RR_imm[31:0]} pipeline_tb2.uut.RR_valid pipeline_tb2.uut.E_valid {pipeline_tb2.uut.E_result[31:0]} pipeline_tb2.uut.M_valid {pipeline_tb2.uut.M_result[31:0]} pipeline_tb2.uut.WB_valid {pipeline_tb2.uut.WB_dst_idx[2:0]} {pipeline_tb2.uut.WB_result[31:0]} pipeline_tb2.uut.clk pipeline_tb2.uut.rst {pipeline_tb2.uut.debug_pc[31:0]} {pipeline_tb2.uut.debug_result[31:0]} pipeline_tb2.uut.flush_jmp pipeline_tb2.uut.actual_stall } -insertionbar
+gui_set_time_units 1ns
+gui_marker_move -id  Wave.1 C1 0.099
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_scroll -window Wave.1 -hrel -.2
+gui_list_select -id Wave.1 -selected  { pipeline_tb2.uut.clk   }
+gui_wv_scroll_hslidermove -id  Wave.1 150
+gui_wv_scroll_hslidermove -id  Wave.1 300
+gui_wv_scroll_hslidermove -id  Wave.1 450
+gui_wv_scroll_hslidermove -id  Wave.1 600
+gui_wv_scroll_hslidermove -id  Wave.1 750
+gui_wv_scroll_hslidermove -id  Wave.1 900
+gui_wv_scroll_hslidermove -id  Wave.1 1050
+gui_wv_scroll_hslidermove -id  Wave.1 1200
+gui_wv_scroll_hslidermove -id  Wave.1 1350
+gui_wv_scroll_hslidermove -id  Wave.1 1500
+gui_wv_scroll_hslidermove -id  Wave.1 1650
+gui_wv_scroll_hslidermove -id  Wave.1 1800
+gui_wv_scroll_hslidermove -id  Wave.1 1950
+gui_wv_scroll_hslidermove -id  Wave.1 2100
+gui_wv_scroll_hslidermove -id  Wave.1 2400
+gui_wv_scroll_hslidermove -id  Wave.1 2550
+gui_wv_scroll_hslidermove -id  Wave.1 2700
+gui_wv_scroll_hslidermove -id  Wave.1 3000
+gui_wv_scroll_hslidermove -id  Wave.1 3150
+gui_wv_scroll_hslidermove -id  Wave.1 3300
+gui_wv_scroll_hslidermove -id  Wave.1 3450
+gui_wv_scroll_hslidermove -id  Wave.1 3600
+gui_wv_scroll_hslidermove -id  Wave.1 3750
+gui_wv_scroll_hslidermove -id  Wave.1 3900
+gui_wv_scroll_hslidermove -id  Wave.1 4200
+gui_wv_scroll_hslidermove -id  Wave.1 4350
+gui_wv_scroll_hslidermove -id  Wave.1 4500
+gui_wv_scroll_hslidermove -id  Wave.1 4950
+gui_wv_scroll_hslidermove -id  Wave.1 5100
+gui_wv_scroll_hslidermove -id  Wave.1 5400
+gui_wv_scroll_hslidermove -id  Wave.1 5850
+gui_wv_scroll_hslidermove -id  Wave.1 6000
+gui_wv_scroll_hslidermove -id  Wave.1 6150
+gui_wv_scroll_hslidermove -id  Wave.1 6600
+gui_wv_scroll_hslidermove -id  Wave.1 6750
+gui_wv_scroll_hslidermove -id  Wave.1 6900
+gui_wv_scroll_hslidermove -id  Wave.1 7050
+gui_wv_scroll_hslidermove -id  Wave.1 7200
+gui_wv_scroll_hslidermove -id  Wave.1 7350
+gui_wv_scroll_hslidermove -id  Wave.1 7500
+gui_marker_move -id  Wave.1 C1 2.64
+gui_wv_scrollright -id  Wave.1  page
+gui_wv_scroll_hslidermove -id  Wave.1 7431
+gui_wv_scroll_hslidermove -id  Wave.1 7581
+gui_wv_scroll_hslidermove -id  Wave.1 7881
+gui_wv_scroll_hslidermove -id  Wave.1 8331
+gui_wv_scroll_hslidermove -id  Wave.1 8481
+gui_wv_scroll_hslidermove -id  Wave.1 8631
+gui_wv_scroll_hslidermove -id  Wave.1 8931
+gui_wv_scroll_hslidermove -id  Wave.1 9081
+gui_wv_scroll_hslidermove -id  Wave.1 9231
+gui_wv_scroll_hslidermove -id  Wave.1 9381
+gui_wv_scroll_hslidermove -id  Wave.1 9681
+gui_marker_move -id  Wave.1 C1 3.381
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 62.233
+gui_marker_move -id  Wave.1 C1 77.28
+gui_marker_move -id  Wave.1 C1 76.43
+gui_list_select -id Data.1 -selected  { {pipeline_tb2.uut.D_len_in[2:0]}   }
+gui_list_expand -id  Hier.1   pipeline_tb2.uut
+gui_list_expand -id  Hier.1   pipeline_tb2.uut.HAZARD_UNIT
+gui_list_select -id Hier.1 -current_item_name pipeline_tb2.uut.HAZARD_UNIT -current_item_type Scope  -selected  { pipeline_tb2.uut.HAZARD_UNIT   }
+gui_list_action -id  Hier.1 pipeline_tb2.uut.HAZARD_UNIT
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.stall_src1   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.stall_src1  pipeline_tb2.uut.HAZARD_UNIT.stall_src2   }
+gui_list_add -id Wave.1 -from Data.1 { pipeline_tb2.uut.HAZARD_UNIT.stall_src1 pipeline_tb2.uut.HAZARD_UNIT.stall_src2 } -insertionbar
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match1_WB   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E  pipeline_tb2.uut.HAZARD_UNIT.match2_M   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E  pipeline_tb2.uut.HAZARD_UNIT.match2_M  pipeline_tb2.uut.HAZARD_UNIT.match2_WB   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E  pipeline_tb2.uut.HAZARD_UNIT.match2_M  pipeline_tb2.uut.HAZARD_UNIT.match2_WB  pipeline_tb2.uut.HAZARD_UNIT.E_valid   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E  pipeline_tb2.uut.HAZARD_UNIT.match2_M  pipeline_tb2.uut.HAZARD_UNIT.match2_WB  pipeline_tb2.uut.HAZARD_UNIT.E_valid  pipeline_tb2.uut.HAZARD_UNIT.M_valid   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E  pipeline_tb2.uut.HAZARD_UNIT.match2_M  pipeline_tb2.uut.HAZARD_UNIT.match2_WB  pipeline_tb2.uut.HAZARD_UNIT.E_valid  pipeline_tb2.uut.HAZARD_UNIT.M_valid  pipeline_tb2.uut.HAZARD_UNIT.WB_valid   }
+gui_list_add -id Wave.1 -from Data.1 { pipeline_tb2.uut.HAZARD_UNIT.E_valid pipeline_tb2.uut.HAZARD_UNIT.M_valid pipeline_tb2.uut.HAZARD_UNIT.WB_valid pipeline_tb2.uut.HAZARD_UNIT.match2_E pipeline_tb2.uut.HAZARD_UNIT.match2_M pipeline_tb2.uut.HAZARD_UNIT.match2_WB } -insertionbar
+gui_marker_move -id  Wave.1 C1 54.986
+gui_list_select -id Wave.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.E_valid   }
+gui_marker_move -id  Wave.1 C1 75.38
+gui_marker_move -id  Wave.1 C1 75.38
+gui_list_select -id Wave.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match2_E   }
+gui_list_select -id Data.1 -selected  { pipeline_tb2.uut.HAZARD_UNIT.match1_M_raw   }
+gui_list_select -id Data.1 -selected  { {pipeline_tb2.uut.HAZARD_UNIT.D_src2_idx[2:0]}   }
+gui_list_select -id Data.1 -selected  { {pipeline_tb2.uut.HAZARD_UNIT.D_src2_idx[2:0]}  {pipeline_tb2.uut.HAZARD_UNIT.E_dst_idx[2:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {pipeline_tb2.uut.HAZARD_UNIT.E_dst_idx[2:0]} {pipeline_tb2.uut.HAZARD_UNIT.D_src2_idx[2:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {pipeline_tb2.uut.HAZARD_UNIT.E_dst_idx[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {pipeline_tb2.uut.HAZARD_UNIT.D_src2_idx[2:0]}   }
+gui_list_select -id Wave.1 -selected  { {pipeline_tb2.uut.HAZARD_UNIT.E_dst_idx[2:0]}   }

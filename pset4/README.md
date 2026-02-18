@@ -19,8 +19,7 @@ How to Run:
 1. Copy the Entire Directory of Files
 2. Go to pset4/testbench and input test cases the same as the two example formats (ctrlflow.hex, deptest.hex) where there is no 0x in front of the bytes and each byte is on a new line. Name the file as follows: <X.hex> where X is the name of the test case.
 3. Go to pset4/src/fetch/instr_mem.v and change the name of the file that is being accessed.
-
-Do in MobaX
+4. Run Program: There is a testbench called combined_tb.v under testbench directory, which runs both tests (deptest.hex and ctrltest.hex). The testbench called both files and reloads each file into memory separately when rerunning. 
 Compile Command: <vcs -debug_all -f master>
 Run Command: <./simv>
-Open DVE: <dve>
+Open DVE: <dve> (for debugging if needed)

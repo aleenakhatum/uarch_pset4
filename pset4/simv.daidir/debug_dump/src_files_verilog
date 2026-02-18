@@ -18,7 +18,7 @@
 /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/src/pipeline.v
 /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/src/register_read/reg_file.v
 /home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/src/register_read/register_read_stage.v
-/home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/testbench/pipeline_tb3.v
+/home/ecelrc/students/aak3265/Spring2026/uarch_pset4/pset4/testbench/combined_tb.v
 /home/projects/courses/spring_22/ee382n19_16785/lib/lib1
 /home/projects/courses/spring_22/ee382n19_16785/lib/lib4
 /home/projects/courses/spring_22/ee382n19_16785/lib/lib5

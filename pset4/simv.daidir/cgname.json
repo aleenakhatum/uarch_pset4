@@ -89,11 +89,11 @@
         "module",
         13
     ],
-    "pipeline_tb3": [
-        "pipeline_tb3",
-        "wKeaB",
+    "combined_tb": [
+        "combined_tb",
+        "twPI5",
         "module",
-        20
+        30
     ],
     "and2$": [
         "and20x24",
